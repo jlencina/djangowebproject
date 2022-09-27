@@ -1,0 +1,9 @@
+#sidebarItens {
+    color: white;
+    background-color: green;
+    font-weight: bold;
+}
+
+#sidebarItens:hover{
+    background-color: rgb(2, 88, 2);
+}

@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+    <meta charset="utf-8">
+    <link rel="icon" href="static/img/sicredi_logo.png" type="image/icon type" alt="Sicredi Logo">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+    {% block title %} 
+    <title>Sicredi</title>
+    {% endblock %}
+{% endblock %}    
+
+{% block navbar %}
+<nav class="navbar bg-light">
+  <div class="col-4 d-flex justify-content-start">
+    <img style="margin-left: 30px;" src="static/img/logo-svg2.svg" alt="Sicredi logo">
+  </div>
+  <div class="col-4 d-flex justify-content-start">
+    <div class="dropdown">
+      <button style="background-color: rgb(243, 243, 243); color: black; border-color: rgb(243, 243, 243);" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Acesse sua conta com
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">CNPJ</a></li>
+        <li><a class="dropdown-item" href="#">CPF</a></li>
+        <li><a class="dropdown-item" href="#">EMAIL</a></li>
+      </ul>
+    </div>
+    <input style="border-top: none; border-right: none; border-left: none;" placeholder="CNPJ">
+    <i style="color: gray; margin-top: 8px; margin-left: 5px;" class="fa fa-arrow-right"></i>
+  </div>
+  <div class="col-4 d-flex justify-content-end">
+    <button style="margin-top: 25px;height: 50px; width: 200px; background-color: green; border-color: green;" type="button" class="btn btn-primary rounded-2">Abra sua conta</button>
+    <button style="margin-left: 100px; height: 100px; width: 100px; background-color:rgb(27, 46, 30); border-color: rgb(27, 46, 30);" type="button" class="btn btn-success rounded-0"><i class="fa fa-search"></i></button>
+    <button style="height: 100px; width: 100px; background-color: green; border-color: green;" class="btn btn-primary rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Ξ</button>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div style="background-color: green; color: white;" class="offcanvas-header justify-content-end">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div style="background-color: green; color: white;" class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a style="color: white; margin-left: 20px; margin-top: -10px;" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Acesso Rápido
+            </a>
+            <ul style="background-color: green; border-color: green; color: green;" class="dropdown-menu dropdown-menu-light">
+              <li><a class="dropdown-item" id="sidebarItens" href="#">Localizar Agência</a></li>
+              <li><a class="dropdown-item" id="sidebarItens" href="#">Fale Conosco</a></li>
+              <li><a class="dropdown-item" id="sidebarItens" href="#">Política de Privacidade</a></li>
+              <li><a class="dropdown-item" id="sidebarItens" href="#">2ª via do boleto</a></li>
+              <li><a class="dropdown-item" id="sidebarItens" href="#">Atendimento</a></li>
+              <li><a class="dropdown-item" id="sidebarItens" href="#">Trabalhe Conosco</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul style="margin-top: 80px;" class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a style="color: white; margin-left: 20px; margin-top: -10px;" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Para Você
+            </a>
+            <ul style="background-color: green; border-color: green; color: green;" class="dropdown-menu dropdown-menu-light">
+            </ul>
+          </li>
+        </ul>
+        <ul style="margin-top: 80px;" class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a style="color: white; margin-left: 20px; margin-top: -10px;" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Para Sua Empresa
+            </a>
+            <ul style="background-color: green; border-color: green; color: green;" class="dropdown-menu dropdown-menu-light">
+            </ul>
+          </li>
+        </ul>
+      </div>
+</div>
+  </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-4 d-flex justify-content-start">
+      <h1 style="margin-top: 100px; margin-left: 50px;" class="title-text">
+          Nós temos as melhores oportunidades <p style="color: rgb(4, 201, 4);">para você</p>
+      </h1>
+    </div>
+    <div class="col-4">
+      <img style="height: 100%; width: 100%;" src="static/img/imagem-centro.jpg" alt="Polnareffu">
+    </div>
+    <div class="col-4 d-flex justify-content-end">
+      <h6 style="margin-right: 20px;" class="smaller-text-right">
+          <p style="color: rgb(4, 201, 4);">Para você</p>
+          <br>
+          <p>Conta Corrente</p>
+          <br>
+          <p>Cartões</p>
+          <br>
+          <p><span style="background-color: wheat; border-radius: 15px; height: 20px;">Novo</span> Pix</p>
+          <br>
+          <p>Consórcios</p>
+          <br>
+          <p>Crédito</p>
+          <br>
+          <p>Investimentos</p>
+          <br>
+          <p>Pagamentos</p>
+          <br>
+          <p>Previdência</p>
+          <br>
+          <p>Máquina de Cartões</p>
+          <br>
+          <p>Seguros</p>
+          <br>
+          <p>Câmbio</p>
+          <br>
+          <p>Certificado Digital</p>
+          <br>
+          <p>Momentos</p>
+      </h6>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+{% block custom_js %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+{% endblock %}
